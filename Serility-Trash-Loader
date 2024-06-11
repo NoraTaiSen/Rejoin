@@ -1,14 +1,7 @@
-repeat
-    wait()
-until game:IsLoaded() and game.Players.LocalPlayer
-
-local fpsScript = game:HttpGet("https://raw.githubusercontent.com/NoraTaiSen/Rejoin/main/Fps.lua")
-local serilityScript = game:HttpGet("https://raw.githubusercontent.com/NoraTaiSen/Rejoin/main/Serility-Trash.lua")
-
-if not getgenv().all then
-    loadstring(fpsScript)() 
-    loadstring(serilityScript)() 
+ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+if not getgenv().New then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoraTaiSen/Rejoin/main/Fps.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoraTaiSen/Rejoin/main/Serility-Trash.lua"))()
 else
-    loadstring(serilityScript)() 
-    loadstring(fpsScript)() 
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NoraTaiSen/Rejoin/main/Serility-Trash.lua"))()
 end
